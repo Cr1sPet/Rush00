@@ -14,6 +14,6 @@
     <orderEntry type="library" name="Maven: net.java.dev.jna:jna:5.5.0" level="project" />
     <orderEntry type="library" name="Maven: net.java.dev.jna:jna-platform:5.5.0" level="project" />
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.81" level="project" />
-    <orderEntry type="library" name="Maven: chaselogic:ChaseLogic:1.0" level="project" />
+    <orderEntry type="module" module-name="ChaseLogic" />
   </component>
 </module>
