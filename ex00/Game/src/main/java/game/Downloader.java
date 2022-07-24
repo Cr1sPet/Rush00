@@ -12,8 +12,10 @@
 
 package game;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 public class Downloader {
@@ -26,7 +28,14 @@ public class Downloader {
 
     public Properties download() throws IOException {
         Properties properties = new Properties();
-        properties.load(new FileReader("src/main/resources/application-" + profile + ".properties"));
+
+        InputStream inputStream;
+
+        String propFileName = String.format("application-%s.properties", profile);
+
+        inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
+        properties.load(inputStream);
+
         return properties;
     }
 }
