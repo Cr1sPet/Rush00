@@ -34,6 +34,11 @@ public class Downloader {
         String propFileName = String.format("application-%s.properties", profile);
 
         inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
+
+
+        if (inputStream == null) {
+            throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
+        }
         properties.load(inputStream);
 
         return properties;
