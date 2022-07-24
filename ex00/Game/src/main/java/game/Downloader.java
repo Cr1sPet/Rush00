@@ -26,13 +26,7 @@ public class Downloader {
 
     public Properties download() throws IOException {
         Properties properties = new Properties();
-        if (profile.equals("production")) {
-            properties.load(new FileReader("../src/main/resources/application-production.properties"));
-        } else if (profile.equals("dev")) {
-            properties.load(new FileReader("../src/main/resources/application-dev.properties"));
-        } else {
-            properties.load(new FileReader("src/main/resources/" + profile + ".properties"));
-        }
+        properties.load(new FileReader("src/main/resources/application-" + profile + ".properties"));
         return properties;
     }
 }

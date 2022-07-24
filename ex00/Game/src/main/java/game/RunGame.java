@@ -74,7 +74,7 @@ public class RunGame {
                     continue;
             }
 
-            if (profile.equals("dev")) {
+            if (profile.equals("production")) {
                 printMatrix(coloredPrinter);
                 System.out.println();
             }
