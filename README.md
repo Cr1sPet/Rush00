@@ -7,7 +7,7 @@
 ```
 cd ex00/Game
 mvn clean package
-java -jar game.jar --enemiesCount=10 --wallsCount=10 --size=30 --profile=production
+java -jar target/game.jar --enemiesCount=10 --wallsCount=10 --size=30 --profile=production
 ```
 
 ### Parameters requirements
