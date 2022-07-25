@@ -59,13 +59,14 @@ public class ChaseLogic {
         }
     }
 
+
     private boolean checkPlayer(int y, int x) {
         return matrix[y - 1][x] == map.getPlayerChar() || matrix[y + 1][x] == map.getPlayerChar() ||
                 matrix[y][x - 1] == map.getPlayerChar() || matrix[y][x + 1] == map.getPlayerChar();
     }
 
     private void moveEnemy(int y, int x, char[][] matrix) {
-        if (y > playerY) {
+        if (y >= playerY) {
             if (x > playerX) {
                 if (x - playerX > y - playerY) {
                     if (this.matrix[y][x - 1] == map.getEmptyChar()
